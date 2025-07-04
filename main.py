@@ -78,7 +78,7 @@ def get_all_schools(db: Session):
 # --- 7. APLICAÇÃO FastAPI E ENDPOINTS ---
 app = FastAPI(title="PortGO API")
 Base.metadata.create_all(bind=engine)
-origins = ["http://localhost:8080", "http://localhost:5173"]
+origins = ["https://jeanmago.github.io/PortGO/#/", "https://portgoback.onrender.com/5173"]
 app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 def get_db():
     db = SessionLocal();_ = (yield db);db.close()
